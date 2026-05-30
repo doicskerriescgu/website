@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.met.ie)",
+      "WebFetch(domain:www.coastguard.ie)",
+      "WebFetch(domain:www.gov.ie)"
+    ]
+  }
+}

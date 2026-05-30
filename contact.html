@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Skerries Coast Guard</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="emergency-banner">
+    <span class="pulse-dot"></span>
+    <strong>EMERGENCY:</strong> Call <a href="tel:112">112</a> or <a href="tel:999">999</a> &mdash; Marine VHF Channel 16
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-logo">
+          <img src="images/ircg-logo.png" alt="Irish Coast Guard logo" class="brand-logo-img" />
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">Skerries Coast Guard</span>
+          <span class="brand-sub">Irish Coast Guard &bull; An Garda Cósta</span>
+        </div>
+      </div>
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="safety.html">Sea Safety</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-eyebrow">Contact</span>
+      <h1>Get in Touch</h1>
+      <p>For non-emergency enquiries only. In an emergency, always call 112 or 999.</p>
+    </div>
+  </section>
+
+  <!-- EMERGENCY CALLOUT -->
+  <div class="emergency-callout container">
+    <div class="emergency-callout-inner">
+      <span class="ec-icon">&#9888;</span>
+      <div>
+        <strong>This is not an emergency contact.</strong> If you need help urgently — call <a href="tel:112">112</a> or <a href="tel:999">999</a>, or transmit a Mayday on VHF Channel 16. This contact form is for general, non-urgent enquiries only.
+      </div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container two-col contact-layout">
+      <div class="col-text">
+        <span class="section-eyebrow">Contact Details</span>
+        <h2>Reach Us</h2>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">&#127968;</div>
+          <div>
+            <strong>Station Address</strong>
+            <p>Skerries Coast Guard Station<br>Harbour Road<br>Skerries<br>Co. Dublin<br>K34 VF64</p>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">&#128233;</div>
+          <div>
+            <strong>General Enquiries</strong>
+            <p><a href="mailto:skerries@coastguard.ie">skerries@coastguard.ie</a></p>
+            <small>We aim to respond within 3 working days.</small>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">&#128100;</div>
+          <div>
+            <strong>Volunteering Enquiries</strong>
+            <p><a href="volunteer.html">Use the volunteer application form</a></p>
+            <small>Or email us at the address above with "VOLUNTEER" in the subject line.</small>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">&#127968;</div>
+          <div>
+            <strong>Parent Organisation</strong>
+            <p>Irish Coast Guard (IRCG)<br>Department of Transport<br><a href="https://www.gov.ie/coastguard" target="_blank" rel="noopener">gov.ie/coastguard</a></p>
+          </div>
+        </div>
+
+        <div class="map-placeholder">
+          <div class="placeholder-content">
+            <span class="placeholder-icon">&#128205;</span>
+            <span>Skerries, Co. Dublin</span>
+            <small>53.5820° N, 6.1060° W</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-form">
+        <div class="contact-form-card">
+          <h3>Send a Message</h3>
+          <p class="form-warning">For emergencies, call <a href="tel:112">112</a> — do not use this form.</p>
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="c-name">Your Name <span class="required">*</span></label>
+              <input type="text" id="c-name" name="name" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="c-email">Email Address <span class="required">*</span></label>
+              <input type="email" id="c-email" name="email" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="c-subject">Subject <span class="required">*</span></label>
+              <select id="c-subject" name="subject" required>
+                <option value="">Select a topic...</option>
+                <option value="general">General Enquiry</option>
+                <option value="volunteer">Volunteering</option>
+                <option value="safety">Safety &amp; Education</option>
+                <option value="media">Media Enquiry</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="c-message">Message <span class="required">*</span></label>
+              <textarea id="c-message" name="message" rows="5" required placeholder="How can we help?"></textarea>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="c-consent" name="consent" required />
+              <label for="c-consent">I understand this is not an emergency contact and agree to my details being used to respond to my enquiry. <span class="required">*</span></label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="footer-title">Skerries Coast Guard</span>
+        <span class="footer-sub">Irish Coast Guard &bull; An Garda Cósta</span>
+        <p class="footer-desc">A volunteer unit of the Irish Coast Guard serving the North County Dublin coastline.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="safety.html">Sea Safety</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>External Links</h4>
+        <ul>
+          <li><a href="https://www.gov.ie/coastguard" target="_blank" rel="noopener">Irish Coast Guard</a></li>
+          <li><a href="https://www.rnli.org" target="_blank" rel="noopener">RNLI Ireland</a></li>
+          <li><a href="https://www.watersafety.ie" target="_blank" rel="noopener">Water Safety Ireland</a></li>
+          <li><a href="https://www.met.ie" target="_blank" rel="noopener">Met Éireann</a></li>
+        </ul>
+      </div>
+      <div class="footer-emergency">
+        <h4>Emergency</h4>
+        <a href="tel:112" class="emergency-num">112</a>
+        <a href="tel:999" class="emergency-num">999</a>
+        <p>VHF Channel 16</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Skerries Coast Guard &bull; Irish Coast Guard &bull; Department of Transport, Ireland</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
