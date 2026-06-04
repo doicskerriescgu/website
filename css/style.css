@@ -570,13 +570,14 @@ h2 {
   border: 2px dashed var(--light-gray);
 }
 .col-image .image-placeholder.large { min-height: 320px; }
+.col-image { align-self: end; }
 .col-image-photo {
   width: 100%;
-  aspect-ratio: 4/3;
-  object-fit: cover;
+  height: auto;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
 }
+.history-photo { margin-top: 40px; }
 .placeholder-content {
   display: flex;
   flex-direction: column;
