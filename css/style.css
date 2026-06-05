@@ -226,7 +226,7 @@ a:hover { color: var(--gold); }
   z-index: 3;
   pointer-events: none;
 }
-.hero-waves svg { width: 100%; display: block; }
+.hero-waves svg { width: 100%; height: 60px; display: block; }
 
 /* ---- BUTTONS ---- */
 .btn {
