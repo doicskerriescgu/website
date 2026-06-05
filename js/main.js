@@ -85,7 +85,60 @@ function showMessage(form, text, type) {
   }
 }
 
-handleForm('contact-form');
+// Contact form — validate then submit to Web3Forms via fetch (no page reload)
+function handleAjaxForm(formId) {
+  const form = document.getElementById(formId);
+  if (!form) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Required-field validation
+    let valid = true;
+    let firstInvalid = null;
+    form.querySelectorAll('[required]').forEach(field => {
+      field.style.borderColor = '';
+      const empty = field.type === 'checkbox' ? !field.checked : !field.value.trim();
+      if (empty) {
+        valid = false;
+        field.style.borderColor = '#c0392b';
+        if (!firstInvalid) firstInvalid = field;
+      }
+    });
+    if (!valid) {
+      if (firstInvalid) firstInvalid.focus();
+      showMessage(form, 'Please fill in all required fields.', 'error');
+      return;
+    }
+
+    const submitBtn = form.querySelector('[type="submit"]');
+    const originalText = submitBtn ? submitBtn.textContent : '';
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending…'; }
+
+    try {
+      const payload = Object.fromEntries(new FormData(form));
+      const res = await fetch(form.action, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+
+      if (res.ok && data.success) {
+        showMessage(form, 'Thank you — your message has been sent. We aim to respond within 3 working days.', 'success');
+        form.reset();
+      } else {
+        showMessage(form, (data && data.message) ? data.message : 'Sorry, something went wrong. Please email us directly instead.', 'error');
+      }
+    } catch (err) {
+      showMessage(form, 'Sorry, your message could not be sent. Please check your connection or email us directly.', 'error');
+    } finally {
+      if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalText; }
+    }
+  });
+}
+
+handleAjaxForm('contact-form');
 handleForm('volunteer-form');
 
 // Smooth scroll offset for sticky header
