@@ -1047,6 +1047,23 @@ svg.service-icon { width: 2.5rem; height: 2.5rem; color: #D4A017; }
 }
 .map-placeholder .placeholder-content small { color: var(--mid-gray); font-size: 0.8rem; }
 
+.station-map {
+  display: block;
+  margin-top: 24px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  line-height: 0;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.station-map:hover { box-shadow: var(--shadow-md); transform: translateY(-1px); }
+.station-map img { width: 100%; height: auto; display: block; }
+.station-map-note {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
 .contact-form-card {
   background: white;
   border-radius: var(--radius-lg);
