@@ -173,7 +173,13 @@
         <h2>Expression of Interest</h2>
         <p class="section-desc">Fill in the form and we'll be in touch within a few days to arrange a chat.</p>
       </div>
-      <form class="volunteer-form" id="volunteer-form" action="mailto:doicskerriescgu@ircg.gov.ie" method="post" enctype="text/plain" novalidate>
+      <form class="volunteer-form" id="volunteer-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+        <!-- Web3Forms config -->
+        <input type="hidden" name="access_key" value="a7fff557-4d79-4138-aae0-b247c12f7c71" />
+        <input type="hidden" name="subject" value="New volunteer expression of interest — Skerries Coast Guard website" />
+        <input type="hidden" name="from_name" value="Skerries Coast Guard Website" />
+        <!-- Honeypot spam trap (hidden from users) -->
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none !important;" />
         <div class="form-row">
           <div class="form-group">
             <label for="v-name">Full Name <span class="required">*</span></label>

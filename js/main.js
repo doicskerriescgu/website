@@ -139,7 +139,7 @@ function handleAjaxForm(formId) {
 }
 
 handleAjaxForm('contact-form');
-handleForm('volunteer-form');
+handleAjaxForm('volunteer-form');
 
 // Smooth scroll offset for sticky header
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
